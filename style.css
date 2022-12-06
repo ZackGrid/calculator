@@ -1,56 +1,129 @@
-body {
-    display: flex;
-    justify-content: center;
+
+.one {
+    grid-area: one;
 }
 
-#calculator {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
+.two {
+    grid-area: two;
 }
 
-#visor {
-    text-align: right;
-    border: 1px solid rgb(116, 14, 93);
-  
+.three {
+    grid-area: three;
 }
 
-p {
-    font-size: large;
-    margin: 1.5px 1.5px;
+.four {
+    grid-area: four;
 }
 
-#content {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid rgb(204, 45, 45);
+.five {
+    grid-area: five;
 }
 
-#vertical {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgb(38, 187, 46);
+.six {
+    grid-area: six;
 }
 
-.top-operators {
-    display: flex;
+.seven {
+    grid-area: seven;
 }
 
-.top-operators, button {
-    flex: auto;
+.eight {
+    grid-area: eight;
 }
 
-.numbers {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 80px;
+.nine {
+    grid-area: nine;
 }
 
-.numbers, button {
-    flex: auto;
+.zero {
+    grid-area: zero;
 }
 
-.side-operators {
-    display: flex;
-    flex-direction: column;
+.ac {
+    grid-area: ac;
+}
+
+.c {
+    grid-area: c;
+}
+
+.percentage {
+    grid-area: percentage;
+}
+
+.divide {
+    grid-area: divide;
+}
+
+.multiply {
+    grid-area: multiply;
+}
+
+.minus {
+    grid-area: minus;
+}
+
+.plus {
+    grid-area: plus;
+}
+
+.equals {
+    grid-area: equals;
+}
+
+.comma {
+    grid-area: comma;
+}
+
+.plus-minus {
+    grid-area: plus-minus;
+}
+
+.screen {
+    grid-area: header;
+    background-color: rgb(245, 240, 233);
+    margin: 10px 0px;
+    box-shadow: 3px 3px 8px inset rgb(100, 81, 57) ;
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    font-weight: 700;
+    text-align: end;
+    
+}
+
+.sketch {
+    margin: 40px auto;
+    display: grid;
+    width: fit-content;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 120px repeat(5, 40px);
+    gap: 5px;
+    padding: 10px;
+    background-color: bisque;
+    grid-template-areas: 
+        "header header header header"
+        "ac c percentage divide"
+        "seven eight nine multiply"
+        "four five six minus"
+        "one two three plus"
+        "zero comma plus-minus equals";
+}
+
+#equal-sign {
+    background-color: rgb(102, 64, 148);
+    color: white;
+}
+
+button {
+    background-color: rgb(212, 197, 230);
+    box-shadow: 1px 2px 3px rgb(87, 74, 104);
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: larger;
+}
+
+div {
+    border: 10px solid rgb(42, 29, 59);
+    border-radius: 12px;
 }
