@@ -53,6 +53,7 @@ function allClear() {
     value1 = 0;
     value2 = 0;
     tempNumber = 0;
+    marker = 1;
 }
 
 //set variables
@@ -61,6 +62,8 @@ let value1 = 0;
 let value2 = 0;
 let displayValue = "";
 let tempOperator = "";
+let marker = 1;
+
 
 const display = document.querySelector('.screen');
 const numbers = document.querySelectorAll('.number');
@@ -73,26 +76,52 @@ const ce = document.querySelector('.ce');
 //store them in a variable displayValue
 numbers.forEach((number) => {
     number.addEventListener('click', () => {
-        displayValue += number.textContent;
-        display.textContent = displayValue;
+        if (marker == 3) {
+            clearDisplay();
+            marker = 2;
+            value1 = tempNumber;
+        } 
+        if (marker != 3) {
+            displayValue += number.textContent;
+            display.textContent = displayValue;
+        }
+        // displayValue += number.textContent;
+        // display.textContent = displayValue;
     })
 });
 
 //when click on an operator, store the first value
-//in a variable and them clear the display
+//in a variable and then clear the display, if 
+//you continue to click on an operator, operate
+//and give result for each new operation 
 operators.forEach((operator) => {
     operator.addEventListener('click', () => {
-        value1 = displayValue;
-        tempOperator = operator;
-        clearDisplay();
+        
+        if (marker == 1) {
+            value1 = displayValue;
+            tempOperator = operator;
+            clearDisplay();
+            marker = 2;
+        } else if (marker == 2) {
+            value2 = displayValue;
+            Operate(tempOperator, parseInt(value1), parseInt(value2));
+            marker = 3;
+        }
+        // value1 = displayValue;
+        // tempOperator = operator;
+        // clearDisplay();
+        
+        
+        
     })
 });
 
-//clicking on equals will call the Operate using the 
+//clicking on equals will call the Operate() using the 
 //values and returning the result on display
 equals.addEventListener('click', () => {
     value2 = displayValue;
-    Operate(tempOperator, parseInt(value1), parseInt(value2))
+    Operate(tempOperator, parseInt(value1), parseInt(value2));
+    marker = 1;
 })
 
 //clear buttons
