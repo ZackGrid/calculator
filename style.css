@@ -127,3 +127,12 @@ div {
     border: 10px solid rgb(42, 29, 59);
     border-radius: 12px;
 }
+
+button:hover{
+    background-color: rgb(155, 130, 187);
+}
+
+button:active{
+    width: 73px;
+    height: 38px;
+}
