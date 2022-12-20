@@ -85,15 +85,15 @@ numbers.forEach((number) => {
     })
 })
 
-window.addEventListener('keydown', (k) => {
-    const array = [];
-    numbers.forEach((number) => {
-        array.push(number.textContent);
-    })
-    if (array.includes(k.key)) {
-        NumberFunction(k.key)
-    }
-})
+// window.addEventListener('keydown', (k) => {
+//     const array = [];
+//     numbers.forEach((number) => {
+//         array.push(number.textContent);
+//     })
+//     if (array.includes(k.key)) {
+//         NumberFunction(k.key)
+//     }
+// })
 
 //when click on an operator, store the first value
 //in a variable and then clear the display, if 
@@ -105,31 +105,32 @@ operators.forEach((operator) => {
     })
 })
 
-window.addEventListener('keydown', (k) => {
-    const array = [];
-    operators.forEach((operator) => {
-        array.push(operator.textContent);
-    })
-    if (array.includes(k.key)) {
-        OperatorFunction(k.key)
-    }
-})
+// window.addEventListener('keydown', (k) => {
+//     const array = [];
+//     operators.forEach((operator) => {
+//         array.push(operator.textContent);
+//     })
+//     if (array.includes(k.key)) {
+//         OperatorFunction(k.key)
+//     }
+// })
 
 //clicking on equals will call the Operate() using the 
 //values and returning the result on display
+
 equals.addEventListener('click', () => {
     value2 = displayValue;
     Operate(tempOperator, parseFloat(value1), parseFloat(value2));
     marker = 1;
 })
 
-window.addEventListener('keydown', (k) => {
-    if (k.key === "Enter") {
-        value2 = displayValue;
-        Operate(tempOperator, parseFloat(value1), parseFloat(value2));
-        marker = 1;
-    }
-})
+// window.addEventListener('keydown', (k) => {    
+//     if (k.key === "Enter") {
+//         value2 = displayValue;
+//         Operate(tempOperator, parseFloat(value1), parseFloat(value2));
+//         marker = 1;
+//     }
+// })
 
 //clear buttons
 ac.addEventListener('click', () => {

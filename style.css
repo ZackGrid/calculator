@@ -47,9 +47,9 @@
     grid-area: c;
 }
 
-.percentage {
+/* .percentage {
     grid-area: percentage;
-}
+} */
 
 .divide {
     grid-area: divide;
@@ -75,13 +75,17 @@
     grid-area: comma;
 }
 
-.plus-minus {
+/* .plus-minus {
     grid-area: plus-minus;
+} */
+
+body {
+    background-color: grey;
 }
 
 .screen {
     grid-area: header;
-    background-color: rgb(245, 240, 233);
+    background-color: rgb(233, 243, 245);
     margin: 10px 0px;
     box-shadow: 3px 3px 8px inset rgb(100, 81, 57) ;
     color: rgb(0, 0, 0);
@@ -99,14 +103,14 @@
     grid-template-rows: 120px repeat(5, 40px);
     gap: 5px;
     padding: 10px;
-    background-color: bisque;
+    background-color: rgb(255, 252, 248);
     grid-template-areas: 
         "header header header header"
-        "ac c percentage divide"
+        "ac ac c divide"
         "seven eight nine multiply"
         "four five six minus"
         "one two three plus"
-        "zero comma plus-minus equals";
+        "zero comma equals equals";
 }
 
 #equal-sign {
@@ -115,17 +119,19 @@
 }
 
 button {
-    background-color: rgb(212, 197, 230);
+    background-color: rgb(215, 211, 219);
     box-shadow: 1px 2px 3px rgb(87, 74, 104);
     border: none;
     border-radius: 15px;
     font-weight: 700;
     font-size: larger;
+    /* outline: none; */
 }
 
 div {
-    border: 10px solid rgb(42, 29, 59);
+    border: 6px solid rgb(20, 19, 22);
     border-radius: 12px;
+    box-shadow: 10px 10px 10px rgb(70, 70, 73);
 }
 
 button:hover{
@@ -133,6 +139,6 @@ button:hover{
 }
 
 button:active{
-    width: 73px;
-    height: 38px;
+    width: 97%;
+    height: 97%;
 }
