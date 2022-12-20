@@ -76,6 +76,7 @@ const operators = document.querySelectorAll('.operator');
 const equals = document.querySelector('.equals');
 const ac = document.querySelector('.ac');
 const ce = document.querySelector('.ce');
+const comma = document.querySelector('.comma');
 
 //show the numbers you click in the display, and
 //store them in a variable displayValue
@@ -83,6 +84,15 @@ numbers.forEach((number) => {
     number.addEventListener('click', () => {
         NumberFunction(number.textContent)
     })
+})
+
+comma.addEventListener('click', () => {
+    if (displayValue.includes('.')) {
+        return
+    } else {
+        displayValue += comma.textContent;
+        display.textContent = displayValue;
+    }
 })
 
 // window.addEventListener('keydown', (k) => {

@@ -87,7 +87,7 @@ body {
     grid-area: header;
     background-color: rgb(233, 243, 245);
     margin: 10px 0px;
-    box-shadow: 3px 3px 8px inset rgb(100, 81, 57) ;
+    box-shadow: 3px 3px 8px inset rgb(80, 87, 86) ;
     color: rgb(0, 0, 0);
     font-size: xx-large;
     font-weight: 700;
@@ -128,14 +128,23 @@ button {
     /* outline: none; */
 }
 
+#ac {
+    background-color: rgb(216, 102, 102);
+    color: white;
+}
+
+#equal-sign {
+    background-color: rgb(105, 185, 105);
+}
+
 div {
-    border: 6px solid rgb(20, 19, 22);
+    border: 5px solid rgb(37, 36, 39);
     border-radius: 12px;
     box-shadow: 10px 10px 10px rgb(70, 70, 73);
 }
 
 button:hover{
-    background-color: rgb(155, 130, 187);
+    background-color: rgb(185, 189, 196);
 }
 
 button:active{
